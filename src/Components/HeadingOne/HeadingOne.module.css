@@ -1,0 +1,33 @@
+.h1 {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  background-size: 200% auto !important;
+  background: linear-gradient(
+    to right,
+    #9333ea,
+    #ec4899,
+    #f97316,
+    #ec4899,
+    #9333ea
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: slideGradient 5s linear infinite;
+
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+}
+
+@keyframes slideGradient {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}

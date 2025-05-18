@@ -1,8 +1,11 @@
+import Banner from "../Components/Banner";
+import HeadingOne from "../Components/HeadingOne";
+
 function Homepage() {
   return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+    <main>
+      <Banner />
+    </main>
   );
 }
 
