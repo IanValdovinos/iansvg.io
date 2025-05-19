@@ -21,6 +21,7 @@ function Banner() {
               "Michigan State University Alumni",
               "Tech Enthusiast",
               "Magic: The Gathering Player",
+              "Hello word",
             ],
             autoStart: true,
             loop: true,
