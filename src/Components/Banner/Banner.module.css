@@ -1,6 +1,14 @@
 .banner {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   padding-top: 5rem;
+  align-items: center;
+}
+
+.memoji {
+  display: block;
+  width: 10rem;
+  margin-bottom: 1rem;
 }
 
 .bannerSubtitle {

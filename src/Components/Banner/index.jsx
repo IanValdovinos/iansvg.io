@@ -4,9 +4,13 @@ import styles from "./Banner.module.css";
 // Components
 import HeadingOne from "../HeadingOne";
 
+// Media
+import Memoji from "../../assets/images/memoji.png";
+
 function Banner() {
   return (
     <header className={styles.banner}>
+      <img className={styles.memoji} src={Memoji} alt="Ian's Memoji" />
       <span className={styles.bannerSubtitle}>Hi, I am</span>
       <HeadingOne>Ian Samuel Valdovinos Granados</HeadingOne>
       <span className={styles.bannerSubtitle}>
