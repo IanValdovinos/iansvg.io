@@ -3,6 +3,7 @@ import Homepage from "./Pages/Homepage";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import PageNotFound from "./Pages/PageNotFound";
+import SectionContainer from "./Components/SectionContainer";
 
 function App() {
   return (

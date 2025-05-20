@@ -1,0 +1,58 @@
+.projectCard {
+  position: relative;
+  width: 32%;
+  height: 27rem;
+  min-height: fit-content;
+  padding: 1.3rem;
+  border-radius: 3px;
+  background-color: #e4e4e4;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in;
+}
+
+.projectCard:hover {
+  transform: scale(1.02);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 13rem;
+  border-radius: 3px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.imageContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin: 0.8rem 0;
+}
+
+.demoLink {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 1.3rem;
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  /* Desktop styles here */
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles here */
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .projectCard {
+    width: 100%;
+  }
+}

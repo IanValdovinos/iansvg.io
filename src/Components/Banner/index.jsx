@@ -7,7 +7,7 @@ import HeadingOne from "../HeadingOne";
 // Media
 import ProfilePicture from "../../assets/images/ghibli_me.png";
 import PrimaryButton from "../PrimaryButton";
-import SecondaryButton from "../SecondaryButton";
+import AnimatedLink from "../AnimatedLink";
 
 function Banner() {
   return (
@@ -46,7 +46,7 @@ function Banner() {
       {/* Action buttons */}
       <div className={styles.buttonContainer}>
         <PrimaryButton>Let's Connect</PrimaryButton>
-        <SecondaryButton>Learn about me</SecondaryButton>
+        <AnimatedLink className={styles.link}>Learn about me</AnimatedLink>
       </div>
     </header>
   );

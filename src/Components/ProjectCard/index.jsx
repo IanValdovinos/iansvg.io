@@ -1,0 +1,26 @@
+import AnimatedLink from "../AnimatedLink";
+import HeadingThree from "../HeadingThree";
+import ParagraphOne from "../ParagraphOne";
+import styles from "./ProjectCard.module.css";
+
+function ProjectCard({ coverImage, title, children }) {
+  return (
+    <div className={styles.projectCard}>
+      {/* Project cover */}
+      <div className={styles.imageContainer}>
+        <img src={coverImage} alt={`${title} project cover`} />
+      </div>
+
+      {/* Project Title */}
+      <HeadingThree className={styles.title}>{title}</HeadingThree>
+
+      {/* Project Description */}
+      <ParagraphOne>{children}</ParagraphOne>
+
+      {/* Action Buttons */}
+      <AnimatedLink className={styles.demoLink}>Live Demo</AnimatedLink>
+    </div>
+  );
+}
+
+export default ProjectCard;
