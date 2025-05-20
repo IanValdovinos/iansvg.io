@@ -42,9 +42,11 @@ function Banner() {
           }}
         />
       </span>
+
+      {/* Action buttons */}
       <div className={styles.buttonContainer}>
-        <PrimaryButton>Primary Button</PrimaryButton>
-        <SecondaryButton>Secondary Button</SecondaryButton>
+        <PrimaryButton>Let's Connect</PrimaryButton>
+        <SecondaryButton>Learn about me</SecondaryButton>
       </div>
     </header>
   );
