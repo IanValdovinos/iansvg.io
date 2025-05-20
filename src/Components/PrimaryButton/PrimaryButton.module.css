@@ -1,7 +1,6 @@
 .button {
   color: black;
   background-color: transparent;
-  padding: 3px;
   border: none;
   box-sizing: border-box;
   font-family: Inter;
@@ -11,25 +10,7 @@
 }
 
 .glow {
-  z-index: 1;
   border-radius: 4px;
-  padding: 0;
-  transition: all 0.2s ease-in;
-}
-
-.buttonInner {
-  padding: 1rem;
-  border-radius: 3px;
-  background-color: #e4e3e3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-}
-
-.button:hover {
-  padding: 0;
-  cursor: pointer;
-}
-
-.button:hover .glow {
   padding: 3px;
   background-size: 200% auto !important;
   background: linear-gradient(
@@ -43,11 +24,15 @@
   animation: slideGradient 5s linear infinite;
 }
 
-.button:hover .buttonInner {
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+.buttonInner {
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease-in;
 }
 
-.button:hover .buttonText {
+.buttonText {
   background-size: 200% auto !important;
   background: linear-gradient(
     to right,
@@ -62,6 +47,15 @@
   background-clip: text;
   color: transparent;
   animation: slideGradient 5s linear infinite;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.button:hover .buttonInner {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
 }
 
 @keyframes slideGradient {

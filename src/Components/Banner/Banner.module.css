@@ -7,6 +7,22 @@
   align-items: center;
 }
 
+.profilePicContainer {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 1000rem;
+  margin-bottom: 2rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+  position: relative;
+}
+
+.profilePicContainer img {
+  width: 100%;
+  height: 100%;
+}
+
 .memoji {
   display: block;
   width: 10rem;

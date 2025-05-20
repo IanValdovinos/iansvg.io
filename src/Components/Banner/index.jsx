@@ -5,7 +5,7 @@ import styles from "./Banner.module.css";
 import HeadingOne from "../HeadingOne";
 
 // Media
-import Memoji from "../../assets/images/memoji.png";
+import ProfilePicture from "../../assets/images/ghibli_me.png";
 import PrimaryButton from "../PrimaryButton";
 import SecondaryButton from "../SecondaryButton";
 
@@ -13,7 +13,13 @@ function Banner() {
   return (
     <header className={styles.banner}>
       {/* Memoji PNG */}
-      <img className={styles.memoji} src={Memoji} alt="Ian's Memoji" />
+      <div className={styles.profilePicContainer}>
+        <img
+          className={styles.memoji}
+          src={ProfilePicture}
+          alt="Ian's profile picture"
+        />
+      </div>
 
       {/* Page Title */}
       <span className={styles.bannerSubtitle}>Hi, I am</span>
