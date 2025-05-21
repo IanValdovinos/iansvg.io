@@ -6,19 +6,23 @@ import styles from "./ProjectCard.module.css";
 function ProjectCard({ coverImage, title, children }) {
   return (
     <div className={styles.projectCard}>
-      {/* Project cover */}
-      <div className={styles.imageContainer}>
-        <img src={coverImage} alt={`${title} project cover`} />
+      <div className={styles.upperSection}>
+        {/* Project cover */}
+        <div className={styles.imageContainer}>
+          <img src={coverImage} alt={`${title} project cover`} />
+        </div>
+
+        {/* Project Title */}
+        <HeadingThree className={styles.title}>{title}</HeadingThree>
+
+        {/* Project Description */}
+        <ParagraphOne>{children}</ParagraphOne>
       </div>
 
-      {/* Project Title */}
-      <HeadingThree className={styles.title}>{title}</HeadingThree>
-
-      {/* Project Description */}
-      <ParagraphOne>{children}</ParagraphOne>
-
       {/* Action Buttons */}
-      <AnimatedLink className={styles.demoLink}>Live Demo</AnimatedLink>
+      <div className={styles.bottomSection}>
+        <AnimatedLink className={styles.demoLink}>Live Demo</AnimatedLink>
+      </div>
     </div>
   );
 }

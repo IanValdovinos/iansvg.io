@@ -8,6 +8,7 @@ import ProjectCard from "../Components/ProjectCard";
 
 // Import Media
 import ProjectImageOne from "../assets/images/test_project_image.png";
+import PrimaryButton from "../Components/PrimaryButton";
 
 function Homepage() {
   return (
@@ -36,6 +37,9 @@ function Homepage() {
             personalized conversations.
           </ProjectCard>
         </div>
+        <PrimaryButton className={styles.projectsButton}>
+          See All Projects
+        </PrimaryButton>
       </SectionContainer>
     </main>
   );

@@ -1,34 +1,36 @@
 .banner {
   /* border: 1px solid red; */
+  padding-top: 2rem;
   width: 100%;
-  padding-top: 5rem;
   text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.upperSection {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .profilePicContainer {
-  width: 15rem;
-  height: 15rem;
+  width: 17rem;
+  height: 17rem;
   border-radius: 1000rem;
   margin-bottom: 2rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 
   overflow: hidden;
-  position: relative;
 }
 
 .profilePicContainer img {
-  position: relative;
   width: 100%;
   height: 100%;
-}
-
-.memoji {
-  display: block;
-  width: 10rem;
-  margin-bottom: 2rem;
 }
 
 .bannerSubtitle {
@@ -40,9 +42,25 @@
 
 .buttonContainer {
   margin-top: 2rem;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  /* Desktop styles here */
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles here */
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .upperSection {
+    height: 40rem;
+  }
 }

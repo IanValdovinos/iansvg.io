@@ -1,11 +1,15 @@
 .projectCard {
-  position: relative;
   width: 32%;
   height: 27rem;
   min-height: fit-content;
   padding: 1.3rem;
   border-radius: 3px;
   background-color: #e4e4e4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in;
 }
@@ -31,13 +35,6 @@
 
 .title {
   margin: 0.8rem 0;
-}
-
-.demoLink {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 1.3rem;
 }
 
 /* Desktop (1024px and up) */
