@@ -12,11 +12,11 @@
 
   background: linear-gradient(
     to right,
-    #9333ea,
-    #ec4899,
-    #f97316,
-    #ec4899,
-    #9333ea
+    var(--primary-color-one),
+    var(--primary-color-two),
+    var(--primary-color-three),
+    var(--primary-color-two),
+    var(--primary-color-one)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

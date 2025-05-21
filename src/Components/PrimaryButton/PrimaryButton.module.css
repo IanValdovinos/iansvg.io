@@ -15,11 +15,11 @@
   background-size: 200% auto !important;
   background: linear-gradient(
     to right,
-    #9333ea,
-    #ec4899,
-    #f97316,
-    #ec4899,
-    #9333ea
+    var(--primary-color-one),
+    var(--primary-color-two),
+    var(--primary-color-three),
+    var(--primary-color-two),
+    var(--primary-color-one)
   );
   animation: slideGradient 5s linear infinite;
 }
@@ -36,11 +36,11 @@
   background-size: 200% auto !important;
   background: linear-gradient(
     to right,
-    #9333ea,
-    #ec4899,
-    #f97316,
-    #ec4899,
-    #9333ea
+    var(--primary-color-one),
+    var(--primary-color-two),
+    var(--primary-color-three),
+    var(--primary-color-two),
+    var(--primary-color-one)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -55,7 +55,7 @@
 }
 
 .button:hover .buttonInner {
-  box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+  box-shadow: 0 0 15px rgba(var(--primary-color-two-rgb), 0.5);
 }
 
 @keyframes slideGradient {
