@@ -5,10 +5,18 @@ import Banner from "../Components/Banner";
 import HeadingTwo from "../Components/HeadingTwo";
 import SectionContainer from "../Components/SectionContainer";
 import ProjectCard from "../Components/ProjectCard";
+import PrimaryButton from "../Components/PrimaryButton";
+import TechStackItem from "../Components/TechStackItem";
 
 // Import Media
 import ProjectImageOne from "../assets/images/test_project_image.png";
-import PrimaryButton from "../Components/PrimaryButton";
+
+import TechStackImageOne from "../assets/icons/html.svg";
+import TechStackImageTwo from "../assets/icons/css.svg";
+import TechStackImageThree from "../assets/icons/javascript.svg";
+import TechStackImageFour from "../assets/icons/docker.png";
+import TechStackImageFive from "../assets/icons/postgresql.png";
+import TechStackImageSix from "../assets/icons/reactjs.svg";
 
 function Homepage() {
   return (
@@ -40,6 +48,19 @@ function Homepage() {
         <PrimaryButton className={styles.projectsButton}>
           See All Projects
         </PrimaryButton>
+      </SectionContainer>
+
+      {/* Tech Stack Section */}
+      <SectionContainer className={styles.techStackSection}>
+        <HeadingTwo>Tech Stack</HeadingTwo>
+        <div className={styles.techStackContainer}>
+          <TechStackItem name={"HTML"} icon={TechStackImageOne} />
+          <TechStackItem name={"CSS"} icon={TechStackImageTwo} />
+          <TechStackItem name={"JavaScript"} icon={TechStackImageThree} />
+          <TechStackItem name={"Docker"} icon={TechStackImageFour} />
+          <TechStackItem name={"PostgreSQL"} icon={TechStackImageFive} />
+          <TechStackItem name={"React"} icon={TechStackImageSix} />
+        </div>
       </SectionContainer>
     </main>
   );

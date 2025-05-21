@@ -4,7 +4,7 @@
   min-height: fit-content;
   padding: 1.3rem;
   border-radius: 3px;
-  background-color: #e4e4e4;
+  background-color: var(--light-grey);
 
   display: flex;
   flex-direction: column;

@@ -1,0 +1,31 @@
+.item {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: var(--light-grey);
+
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in;
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.item img {
+  width: 100%;
+  object-fit: contain; /* or 'cover' if you want cropping */
+  min-height: 0; /* important for shrinking */
+}
