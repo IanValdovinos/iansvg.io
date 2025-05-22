@@ -1,6 +1,7 @@
 .item {
   aspect-ratio: 1 / 1;
   width: 100%;
+  min-width: 0;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 3px;
@@ -26,6 +27,7 @@
 
 .item img {
   width: 100%;
-  object-fit: contain; /* or 'cover' if you want cropping */
-  min-height: 0; /* important for shrinking */
+  object-fit: contain;
+  min-height: 0;
+  min-width: 0;
 }

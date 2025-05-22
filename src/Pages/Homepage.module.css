@@ -45,10 +45,11 @@
 /* ############ TECH STACK SECTION ############ */
 /* ############################################ */
 .techStackSection {
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .techStackContainer {
+  border: 1px solid green;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
