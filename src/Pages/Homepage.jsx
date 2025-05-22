@@ -14,9 +14,16 @@ import ProjectImageOne from "../assets/images/test_project_image.png";
 import TechStackImageOne from "../assets/icons/html.svg";
 import TechStackImageTwo from "../assets/icons/css.svg";
 import TechStackImageThree from "../assets/icons/javascript.svg";
-import TechStackImageFour from "../assets/icons/docker.png";
-import TechStackImageFive from "../assets/icons/postgresql.png";
+import TechStackImageFour from "../assets/icons/docker.svg";
+import TechStackImageFive from "../assets/icons/postgresql.svg";
 import TechStackImageSix from "../assets/icons/reactjs.svg";
+import TechStackImageSeven from "../assets/icons/css-modules.svg";
+import TechStackImageEight from "../assets/icons/fastapi.svg";
+import TechStackImageNine from "../assets/icons/git.svg";
+import TechStackImageTen from "../assets/icons/github.svg";
+import TechStackImageEleven from "../assets/icons/google-cloud.svg";
+import TechStackImageTwelve from "../assets/icons/react-router-dom.svg";
+import TechStackImageThirdteen from "../assets/icons/vitejs.svg";
 
 function Homepage() {
   return (
@@ -60,6 +67,12 @@ function Homepage() {
           <TechStackItem name={"Docker"} icon={TechStackImageFour} />
           <TechStackItem name={"PostgreSQL"} icon={TechStackImageFive} />
           <TechStackItem name={"React"} icon={TechStackImageSix} />
+          <TechStackItem name={"CSS Modules"} icon={TechStackImageSeven} />
+          <TechStackItem name={"FastAPI"} icon={TechStackImageEight} />
+          <TechStackItem name={"Git"} icon={TechStackImageNine} />
+          <TechStackItem name={"GitHub"} icon={TechStackImageTen} />
+          <TechStackItem name={"Google Cloud"} icon={TechStackImageEleven} />
+          <TechStackItem name={"React Router"} icon={TechStackImageTwelve} />
         </div>
       </SectionContainer>
     </main>

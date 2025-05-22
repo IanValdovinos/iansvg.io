@@ -10,6 +10,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   justify-content: space-between;
 }
 
@@ -37,7 +38,7 @@
   .projectsContainer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
@@ -45,11 +46,11 @@
 /* ############ TECH STACK SECTION ############ */
 /* ############################################ */
 .techStackSection {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .techStackContainer {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;

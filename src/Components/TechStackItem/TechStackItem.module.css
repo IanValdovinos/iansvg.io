@@ -12,7 +12,8 @@
 }
 
 .item:hover {
-  transform: scale(1.02);
+  transform: scale(1.04);
+  box-shadow: 0 0 15px rgba(var(--primary-color-two-rgb), 0.5);
 }
 
 .innerContainer {
@@ -22,7 +23,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .item img {
