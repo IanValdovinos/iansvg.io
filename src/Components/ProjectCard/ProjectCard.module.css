@@ -52,6 +52,6 @@
 /* Mobile (up to 767px) */
 @media (max-width: 767px) {
   .projectCard {
-    width: 100%;
+    gap: 1rem;
   }
 }
