@@ -6,7 +6,9 @@ import HeadingTwo from "../Components/HeadingTwo";
 import SectionContainer from "../Components/SectionContainer";
 import ProjectCard from "../Components/ProjectCard";
 import PrimaryButton from "../Components/PrimaryButton";
+import AnimatedLink from "../Components/AnimatedLink";
 import TechStackItem from "../Components/TechStackItem";
+import CertificateCard from "../Components/CertificateCard";
 
 // Import Media
 import ProjectImageOne from "../assets/images/test_project_image.png";
@@ -24,6 +26,13 @@ import TechStackImageTen from "../assets/icons/github.svg";
 import TechStackImageEleven from "../assets/icons/google-cloud.svg";
 import TechStackImageTwelve from "../assets/icons/react-router-dom.svg";
 import TechStackImageThirdteen from "../assets/icons/vitejs.svg";
+
+import CertificateOne from "../assets/images/certificates/AI_A-Z.jpg";
+import CertificateTwo from "../assets/images/certificates/DS_codecademy.jpg";
+import CertificateThree from "../assets/images/certificates/React_codecademy.jpg";
+import CertificateFour from "../assets/images/certificates/DFSS_Green_Belt.jpg";
+import CertificateFive from "../assets/images/certificates/msu_cs_diploma.jpg";
+import CertificateSix from "../assets/images/certificates/amazon_sigma_award.jpg";
 
 function Homepage() {
   return (
@@ -74,6 +83,42 @@ function Homepage() {
           <TechStackItem name={"Google Cloud"} icon={TechStackImageEleven} />
           <TechStackItem name={"React Router"} icon={TechStackImageTwelve} />
         </div>
+      </SectionContainer>
+
+      {/* Certificates & Awards */}
+      <SectionContainer>
+        <HeadingTwo>Certificates & Awards</HeadingTwo>
+        <div className={styles.certificatesContainer}>
+          <CertificateCard
+            image={CertificateFive}
+            title={"Michigan State University Computer Science Diploma"}
+          />
+          {/* <CertificateCard
+            image={CertificateSix}
+            title={"Amazon Sigma Award: Best Overall Experience"}
+          /> */}
+          <CertificateCard
+            image={CertificateOne}
+            title={
+              "Artificial Intelligence A-Z 2025: Agentic AI, Gen AI, and RL Certificate"
+            }
+          />
+          <CertificateCard
+            image={CertificateTwo}
+            title={"Complex Data Structues Codecademy Certificate"}
+          />
+          <CertificateCard
+            image={CertificateThree}
+            title={"React Codecademy Certificate"}
+          />
+          {/* <CertificateCard
+            image={CertificateFour}
+            title={"DFSS Green Belt Certificate"}
+          /> */}
+        </div>
+        <AnimatedLink className={styles.seeMoreCertificatesButton}>
+          See more
+        </AnimatedLink>
       </SectionContainer>
     </main>
   );

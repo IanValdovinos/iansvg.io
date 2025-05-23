@@ -75,3 +75,36 @@
     gap: 1rem;
   }
 }
+
+/* ######################################################## */
+/* ############ CAERTIFICATES & AWARDS SECTION ############ */
+/* ######################################################### */
+.certificatesContainer {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.seeMoreCertificatesButton {
+  margin-top: 2rem;
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+}
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) {
+  .certificatesContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .certificatesContainer {
+    gap: 1rem;
+  }
+}
