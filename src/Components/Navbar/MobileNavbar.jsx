@@ -8,6 +8,11 @@ function MobileNavbar({ onContactMeClick, children }) {
     setNavbarVisible((prev) => !prev);
   };
 
+  const handleContactMeClick = () => {
+    setNavbarVisible((prev) => !prev);
+    onContactMeClick();
+  };
+
   return (
     <>
       {/* Hamburger Button */}
@@ -40,7 +45,10 @@ function MobileNavbar({ onContactMeClick, children }) {
           ))}
 
           <div className={styles.navbarOption}>
-            <span onClick={onContactMeClick} className={styles.contactMeButton}>
+            <span
+              onClick={handleContactMeClick}
+              className={styles.contactMeButton}
+            >
               Contact Me
             </span>
           </div>

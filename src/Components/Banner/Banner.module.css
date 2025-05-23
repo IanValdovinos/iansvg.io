@@ -60,6 +60,10 @@
 
 /* Mobile (up to 767px) */
 @media (max-width: 767px) {
+  .banner {
+    padding-top: 3rem;
+  }
+
   .upperSection {
     height: 40rem;
   }
