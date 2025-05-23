@@ -1,0 +1,27 @@
+.span {
+  background-size: 200% auto !important;
+  background: linear-gradient(
+    to right,
+    var(--primary-color-one),
+    var(--primary-color-two),
+    var(--primary-color-three),
+    var(--primary-color-two),
+    var(--primary-color-one)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: slideGradient 5s linear infinite;
+
+  text-shadow: 0 0 10px rgba(var(--primary-color-two-rgb), 0.5);
+}
+
+@keyframes slideGradient {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}

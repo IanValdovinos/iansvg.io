@@ -4,17 +4,24 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import PageNotFound from "./Pages/PageNotFound";
 import SectionContainer from "./Components/SectionContainer";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="about-me" element={<About />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="about-me" element={<About />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+
+      <SectionContainer>
+        <Footer />
+      </SectionContainer>
+    </>
   );
 }
 
