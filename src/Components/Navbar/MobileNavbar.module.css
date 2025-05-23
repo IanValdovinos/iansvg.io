@@ -1,0 +1,57 @@
+.navbarButton {
+  fill: black;
+  z-index: 11;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  width: 3rem;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  backdrop-filter: blur(12px); /* blur effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.optionContainer {
+  padding: 4rem 0 2rem 0;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navbarOption {
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+.navbarOption a {
+  color: black;
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  transition: all 0.2s ease-in;
+}
+
+.contactMeButton {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  transition: all 0.2s ease-in;
+
+  padding: 0.5rem 1rem;
+  background: rgba(165, 165, 165, 0.4);
+  border: 1px solid rgba(136, 136, 136, 0.4);
+  border-radius: 1000rem;
+}
