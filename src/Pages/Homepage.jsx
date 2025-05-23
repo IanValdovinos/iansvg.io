@@ -32,7 +32,7 @@ import CertificateTwo from "../assets/images/certificates/DS_codecademy.jpg";
 import CertificateThree from "../assets/images/certificates/React_codecademy.jpg";
 import CertificateFour from "../assets/images/certificates/DFSS_Green_Belt.jpg";
 import CertificateFive from "../assets/images/certificates/msu_cs_diploma.jpg";
-import CertificateSix from "../assets/images/certificates/amazon_sigma_award.jpg";
+import CertificateSix from "../assets/images/certificates/amazon_sigma_award.JPG";
 
 function Homepage() {
   return (
