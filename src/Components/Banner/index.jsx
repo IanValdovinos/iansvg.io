@@ -15,7 +15,7 @@ function Banner() {
       <div className={styles.upperSection}>
         {/* Memoji PNG */}
         <div className={styles.profilePicContainer}>
-          <img src={ProfilePicture} alt="Ian's profile picture" />
+          <img src={ProfilePicture} alt="Ian Samuel Valdovinos Granados" />
         </div>
 
         {/* Page Title */}
