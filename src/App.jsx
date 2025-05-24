@@ -30,7 +30,7 @@ function App() {
 
       {/* Page Content */}
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route index element={<Homepage />} />
         <Route path="about-me" element={<About />} />
         <Route path="projects" element={<Projects />} />
         <Route path="*" element={<PageNotFound />} />
