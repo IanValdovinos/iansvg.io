@@ -1,5 +1,9 @@
 .aboutMeIntro {
-  border: 1px solid red;
-  padding-top: 5rem;
+  /* border: 1px solid red; */
+  padding-top: 6rem;
   text-align: center;
+}
+
+.aboutMeTitle {
+  margin-bottom: 1rem;
 }
