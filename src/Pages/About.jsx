@@ -1,12 +1,25 @@
+import styles from "./About.module.css";
+
 import HeadingOne from "../Components/HeadingOne";
+import HeadingThree from "../Components/HeadingThree";
+import HeadingTwo from "../Components/HeadingTwo";
 import ParagraphOne from "../Components/ParagraphOne";
 import SectionContainer from "../Components/SectionContainer";
 import TechStack from "../Components/TechStack";
-import styles from "./About.module.css";
+import UseItem from "../Components/UseItem";
+
+// Media
+import VSCodeLogo from "../assets/icons/vscode.svg";
+import GoogleCalendarLogo from "../assets/icons/google-calendar.svg";
+import GoogleCloudLogo from "../assets/icons/google-cloud-black.svg";
+import GoogleDriveLogo from "../assets/icons/google-drive.svg";
+import NotionLogo from "../assets/icons/notion.svg";
+import SlackLogo from "../assets/icons/slack.svg";
 
 function About() {
   return (
     <main>
+      {/* About Me Introduction */}
       <SectionContainer className={styles.aboutMeIntro}>
         <HeadingOne className={styles.aboutMeTitle}>About Me</HeadingOne>
         <ParagraphOne>
@@ -25,8 +38,31 @@ function About() {
         </ParagraphOne>
       </SectionContainer>
 
+      {/* Tech Stack */}
       <SectionContainer>
         <TechStack />
+      </SectionContainer>
+
+      {/* What I Use */}
+      <SectionContainer>
+        <HeadingTwo>What I Use</HeadingTwo>
+        <HeadingThree>Productivity</HeadingThree>
+        <div className={styles.productivityUseItemsContainer}>
+          <UseItem logo={VSCodeLogo} name={"VSCode"} since={"2017.08"} />
+          <UseItem
+            logo={GoogleCalendarLogo}
+            name={"Google Calendar"}
+            since={"2017.08"}
+          />
+          <UseItem logo={GoogleCloudLogo} name={"VSCode"} since={"2017.08"} />
+          <UseItem
+            logo={GoogleDriveLogo}
+            name={"Google Drive"}
+            since={"2017.08"}
+          />
+          <UseItem logo={NotionLogo} name={"Notion"} since={"2017.08"} />
+          <UseItem logo={SlackLogo} name={"Slack"} since={"2017.08"} />
+        </div>
       </SectionContainer>
     </main>
   );
