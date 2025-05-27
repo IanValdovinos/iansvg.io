@@ -12,21 +12,24 @@ import ContactMeForm from "./Components/ContactMeForm";
 function App() {
   const [isContactFormVisible, setContactFormVisible] = useState(false);
 
-  const openContactForm = () => {
+  const flickContactForm = () => {
     setContactFormVisible((prev) => !prev);
   };
 
   return (
     <BrowserRouter>
       {/* Navbar */}
-      <Navbar onContactMeClick={openContactForm}>
+      <Navbar onContactMeClick={flickContactForm}>
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/about-me"}>About Me</NavLink>
         <NavLink to={"/projects"}>Projects</NavLink>
       </Navbar>
 
       {/* Contact Me Form */}
-      <ContactMeForm display={isContactFormVisible} />
+      <ContactMeForm
+        display={isContactFormVisible}
+        onClickBackground={flickContactForm}
+      />
 
       {/* Page Content */}
       <Routes>
