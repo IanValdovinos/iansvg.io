@@ -1,8 +1,14 @@
+import HeadingOne from "../Components/HeadingOne";
+import SectionContainer from "../Components/SectionContainer";
+import styles from "./About.module.css";
+
 function About() {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <main>
+      <SectionContainer className={styles.aboutMeIntro}>
+        <HeadingOne>About Me</HeadingOne>
+      </SectionContainer>
+    </main>
   );
 }
 
