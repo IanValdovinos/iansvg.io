@@ -1,8 +1,17 @@
+/* ########################################## */
+/* ############ ABOUT ME SECTION ############ */
+/* ########################################## */
+
+.aboutMeSection {
+  text-align: center;
+}
+
 /* #################################################### */
 /* ############ PROJECT HIGHLIGHTS SECTION ############ */
 /* #################################################### */
 .projectsSection {
-  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
 }
 
 .projectsContainer {
@@ -10,12 +19,14 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   gap: 2rem;
   justify-content: space-between;
 }
 
 .projectsButton {
   margin-top: 2rem;
+  align-self: center;
 }
 
 /* Desktop (1024px and up) */
