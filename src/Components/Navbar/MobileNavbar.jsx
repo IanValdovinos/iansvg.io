@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import styles from "./MobileNavbar.module.css";
 
-function MobileNavbar({ onContactMeClick, children }) {
+function MobileNavbar({ onOptionSelect, onContactMeClick, children }) {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
 
   const openNavbar = () => {
     setNavbarVisible((prev) => !prev);
   };
 
-  const handleContactMeClick = () => {
+  const handleOptionClick = () => {
     setNavbarVisible((prev) => !prev);
+    onOptionSelect();
+  };
+
+  const handleContactMeClick = () => {
+    handleOptionClick();
     onContactMeClick();
   };
 
@@ -39,7 +44,11 @@ function MobileNavbar({ onContactMeClick, children }) {
       >
         <div className={styles.optionContainer}>
           {React.Children.map(children, (child, index) => (
-            <div className={styles.navbarOption} key={index}>
+            <div
+              onClick={handleOptionClick}
+              className={styles.navbarOption}
+              key={index}
+            >
               {child}
             </div>
           ))}

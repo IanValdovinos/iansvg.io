@@ -7,6 +7,10 @@ function Navbar({ onContactMeClick, children }) {
 
   const Component = isMobile ? MobileNavbar : DesktopNavbar;
 
+  const handleOptionSelect = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)");
     const handleResize = () => setIsMobile(mediaQuery.matches);
@@ -14,7 +18,14 @@ function Navbar({ onContactMeClick, children }) {
     return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
 
-  return <Component onContactMeClick={onContactMeClick}>{children}</Component>;
+  return (
+    <Component
+      onContactMeClick={onContactMeClick}
+      onOptionSelect={handleOptionSelect}
+    >
+      {children}
+    </Component>
+  );
 }
 
 export default Navbar;
