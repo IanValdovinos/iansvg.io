@@ -1,5 +1,6 @@
 .techStackContainer {
   /* border: 1px solid green; */
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
