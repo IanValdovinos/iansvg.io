@@ -12,6 +12,12 @@
   border-radius: 3px;
   background-color: var(--light-grey);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in;
+}
+
+.useItem:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(var(--primary-color-two-rgb), 0.5);
 }
 
 .useItem img {
@@ -28,5 +34,5 @@
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 2rem;
-  color: var(--font-color);
+  color: black;
 }

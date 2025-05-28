@@ -15,6 +15,15 @@ import GoogleCloudLogo from "../assets/icons/google-cloud-black.svg";
 import GoogleDriveLogo from "../assets/icons/google-drive.svg";
 import NotionLogo from "../assets/icons/notion.svg";
 import SlackLogo from "../assets/icons/slack.svg";
+import CanvaLogo from "../assets/icons/canva.svg";
+import ChatGPTLogo from "../assets/icons/chatgpt.svg";
+import DiscordLogo from "../assets/icons/discord.svg";
+import FigmaLogo from "../assets/icons/figma.svg";
+import iCloudLogo from "../assets/icons/icloud.svg";
+import Microsoft365Logo from "../assets/icons/microsoft-365.svg";
+import SquarespaceLogo from "../assets/icons/squarespace.svg";
+import TrelloLogo from "../assets/icons/trello.svg";
+import UdemyLogo from "../assets/icons/udemy.svg";
 
 function About() {
   return (
@@ -46,22 +55,41 @@ function About() {
       {/* What I Use */}
       <SectionContainer>
         <HeadingTwo>What I Use</HeadingTwo>
-        <HeadingThree>Productivity</HeadingThree>
+        <HeadingThree className={styles.productivityUsesTitle}>
+          Productivity
+        </HeadingThree>
         <div className={styles.productivityUseItemsContainer}>
-          <UseItem logo={VSCodeLogo} name={"VSCode"} since={"2017.08"} />
+          <UseItem logo={VSCodeLogo} name={"VSCode"} since={"2017"} />
           <UseItem
             logo={GoogleCalendarLogo}
             name={"Google Calendar"}
-            since={"2017.08"}
+            since={"2020"}
           />
-          <UseItem logo={GoogleCloudLogo} name={"VSCode"} since={"2017.08"} />
+          <UseItem
+            logo={GoogleCloudLogo}
+            name={"Google Cloud"}
+            since={"2022"}
+          />
           <UseItem
             logo={GoogleDriveLogo}
             name={"Google Drive"}
-            since={"2017.08"}
+            since={"2018"}
           />
-          <UseItem logo={NotionLogo} name={"Notion"} since={"2017.08"} />
-          <UseItem logo={SlackLogo} name={"Slack"} since={"2017.08"} />
+          <UseItem logo={NotionLogo} name={"Notion"} since={"2020"} />
+          <UseItem logo={SlackLogo} name={"Slack"} since={"2022"} />
+          <UseItem logo={CanvaLogo} name={"Canva"} since={"2021"} />
+          <UseItem logo={ChatGPTLogo} name={"ChatGPT"} since={"2022"} />
+          <UseItem logo={DiscordLogo} name={"Discord"} since={"2018"} />
+          <UseItem logo={FigmaLogo} name={"Figma"} since={"2024"} />
+          <UseItem logo={iCloudLogo} name={"iCloud"} since={"2020"} />
+          <UseItem
+            logo={Microsoft365Logo}
+            name={"Microsoft 365"}
+            since={"2011"}
+          />
+          <UseItem logo={SquarespaceLogo} name={"Squarespace"} since={"2022"} />
+          <UseItem logo={TrelloLogo} name={"Trello"} since={"2022"} />
+          <UseItem logo={UdemyLogo} name={"Udemy"} since={"2018"} />
         </div>
       </SectionContainer>
     </main>

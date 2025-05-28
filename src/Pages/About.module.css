@@ -14,6 +14,10 @@
 /* ############################################ */
 /* ############ WHAT I USE SECTION ############ */
 /* ############################################ */
+.productivityUsesTitle {
+  text-align: center;
+}
+
 .productivityUseItemsContainer {
   /* border: 1px solid red; */
   margin-top: 1rem;
