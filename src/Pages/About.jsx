@@ -30,6 +30,7 @@ import NetflixLogo from "../assets/icons/netflix.svg";
 import SpotifyLogo from "../assets/icons/spotify.svg";
 import XboxLogo from "../assets/icons/xbox.svg";
 import YouTubeLogo from "../assets/icons/youtube.svg";
+import WorkExperienceLabel from "../Components/WorkExperienceLabel";
 
 function About() {
   return (
@@ -53,6 +54,18 @@ function About() {
         </ParagraphOne>
       </SectionContainer>
 
+      {/* Work Experience */}
+      <SectionContainer>
+        <HeadingTwo>Work Experience</HeadingTwo>
+
+        <WorkExperienceLabel
+          time={"JUN 2024-CURRENT"}
+          company={"General Motors"}
+          location={"Warren, MI"}
+          workType={"In-person"}
+        />
+      </SectionContainer>
+
       {/* Tech Stack */}
       <SectionContainer>
         <TechStack />
@@ -61,6 +74,8 @@ function About() {
       {/* What I Use */}
       <SectionContainer>
         <HeadingTwo>What I Use</HeadingTwo>
+
+        {/* Productivity */}
         <HeadingThree className={styles.usesTitle}>Productivity</HeadingThree>
         <div className={styles.useItemsContainer}>
           <UseItem logo={VSCodeLogo} name={"VSCode"} since={"2017"} />
@@ -96,16 +111,17 @@ function About() {
           <UseItem logo={UdemyLogo} name={"Udemy"} since={"2018"} />
         </div>
 
+        {/* Lifestyle Services */}
         <HeadingThree className={styles.usesTitle}>
           Lifestyle Services
         </HeadingThree>
         <div className={styles.useItemsContainer}>
           <UseItem logo={CellularLogo} name={"Mint Mobile"} since={"2020"} />
+          <UseItem logo={SpotifyLogo} name={"Spotify"} since={"2018"} />
+          <UseItem logo={YouTubeLogo} name={"YouTube Premium"} since={"2022"} />
           <UseItem logo={DisneyPlusLogo} name={"Disney Plus"} since={"2019"} />
           <UseItem logo={NetflixLogo} name={"Netflix"} since={"2015"} />
-          <UseItem logo={SpotifyLogo} name={"Spotify"} since={"2018"} />
           <UseItem logo={XboxLogo} name={"XBOX"} since={"2010"} />
-          <UseItem logo={YouTubeLogo} name={"YouTube Premium"} since={"2022"} />
         </div>
       </SectionContainer>
     </main>
