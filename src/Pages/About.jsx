@@ -24,6 +24,12 @@ import Microsoft365Logo from "../assets/icons/microsoft-365.svg";
 import SquarespaceLogo from "../assets/icons/squarespace.svg";
 import TrelloLogo from "../assets/icons/trello.svg";
 import UdemyLogo from "../assets/icons/udemy.svg";
+import CellularLogo from "../assets/icons/cellular.svg";
+import DisneyPlusLogo from "../assets/icons/disney-plus.svg";
+import NetflixLogo from "../assets/icons/netflix.svg";
+import SpotifyLogo from "../assets/icons/spotify.svg";
+import XboxLogo from "../assets/icons/xbox.svg";
+import YouTubeLogo from "../assets/icons/youtube.svg";
 
 function About() {
   return (
@@ -55,10 +61,8 @@ function About() {
       {/* What I Use */}
       <SectionContainer>
         <HeadingTwo>What I Use</HeadingTwo>
-        <HeadingThree className={styles.productivityUsesTitle}>
-          Productivity
-        </HeadingThree>
-        <div className={styles.productivityUseItemsContainer}>
+        <HeadingThree className={styles.usesTitle}>Productivity</HeadingThree>
+        <div className={styles.useItemsContainer}>
           <UseItem logo={VSCodeLogo} name={"VSCode"} since={"2017"} />
           <UseItem
             logo={GoogleCalendarLogo}
@@ -90,6 +94,18 @@ function About() {
           <UseItem logo={SquarespaceLogo} name={"Squarespace"} since={"2022"} />
           <UseItem logo={TrelloLogo} name={"Trello"} since={"2022"} />
           <UseItem logo={UdemyLogo} name={"Udemy"} since={"2018"} />
+        </div>
+
+        <HeadingThree className={styles.usesTitle}>
+          Lifestyle Services
+        </HeadingThree>
+        <div className={styles.useItemsContainer}>
+          <UseItem logo={CellularLogo} name={"Mint Mobile"} since={"2020"} />
+          <UseItem logo={DisneyPlusLogo} name={"Disney Plus"} since={"2019"} />
+          <UseItem logo={NetflixLogo} name={"Netflix"} since={"2015"} />
+          <UseItem logo={SpotifyLogo} name={"Spotify"} since={"2018"} />
+          <UseItem logo={XboxLogo} name={"XBOX"} since={"2010"} />
+          <UseItem logo={YouTubeLogo} name={"YouTube Premium"} since={"2022"} />
         </div>
       </SectionContainer>
     </main>

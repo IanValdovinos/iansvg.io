@@ -7,7 +7,6 @@ import SectionContainer from "../Components/SectionContainer";
 import ProjectCard from "../Components/ProjectCard";
 import PrimaryButton from "../Components/PrimaryButton";
 import AnimatedLink from "../Components/AnimatedLink";
-import TechStackItem from "../Components/TechStackItem";
 import CertificateCard from "../Components/CertificateCard";
 
 // Import Media
@@ -16,9 +15,9 @@ import ProjectImageOne from "../assets/images/test_project_image.png";
 import CertificateOne from "../assets/images/certificates/AI_A-Z.jpg";
 import CertificateTwo from "../assets/images/certificates/DS_codecademy.jpg";
 import CertificateThree from "../assets/images/certificates/React_codecademy.jpg";
-import CertificateFour from "../assets/images/certificates/DFSS_Green_Belt.jpg";
+// import CertificateFour from "../assets/images/certificates/DFSS_Green_Belt.jpg";
 import CertificateFive from "../assets/images/certificates/msu_cs_diploma.jpg";
-import CertificateSix from "../assets/images/certificates/amazon_sigma_award.JPG";
+// import CertificateSix from "../assets/images/certificates/amazon_sigma_award.JPG";
 import ParagraphOne from "../Components/ParagraphOne";
 import TechStack from "../Components/TechStack";
 
