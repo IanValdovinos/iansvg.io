@@ -14,7 +14,7 @@ function MobileNavbar({ onOptionSelect, onContactMeClick, children }) {
   };
 
   const handleContactMeClick = () => {
-    handleOptionClick();
+    setNavbarVisible((prev) => !prev);
     onContactMeClick();
   };
 
