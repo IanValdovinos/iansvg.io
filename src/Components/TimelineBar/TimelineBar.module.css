@@ -1,0 +1,31 @@
+.timelineWrapper {
+  width: fit-content;
+  height: 200vh; /* For scroll space */
+  display: flex;
+  align-items: center;
+}
+
+.timeline {
+  border-radius: 10rem;
+  position: relative;
+  width: 0.5rem;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color-one) 0%,
+    var(--primary-color-two) var(--marker-top, 0%),
+    var(--medium-grey, #ccc) var(--marker-top, 0%),
+    var(--medium-grey, #ccc) 100%
+  );
+}
+
+.marker {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
+}

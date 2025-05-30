@@ -31,6 +31,7 @@ import SpotifyLogo from "../assets/icons/spotify.svg";
 import XboxLogo from "../assets/icons/xbox.svg";
 import YouTubeLogo from "../assets/icons/youtube.svg";
 import WorkExperienceLabel from "../Components/WorkExperienceLabel";
+import TimelineBar from "../Components/TimelineBar";
 
 function About() {
   return (
@@ -58,12 +59,7 @@ function About() {
       <SectionContainer>
         <HeadingTwo>Work Experience</HeadingTwo>
 
-        <WorkExperienceLabel
-          time={"JUN 2024-CURRENT"}
-          company={"General Motors"}
-          location={"Warren, MI"}
-          workType={"In-person"}
-        />
+        <TimelineBar />
       </SectionContainer>
 
       {/* Tech Stack */}
