@@ -7,6 +7,8 @@ import ParagraphOne from "../Components/ParagraphOne";
 import SectionContainer from "../Components/SectionContainer";
 import TechStack from "../Components/TechStack";
 import UseItem from "../Components/UseItem";
+import WorkExperienceItem from "../Components/WorkExperienceItem";
+import TimelineBar from "../Components/TimelineBar";
 
 // Media
 import VSCodeLogo from "../assets/icons/vscode.svg";
@@ -30,8 +32,7 @@ import NetflixLogo from "../assets/icons/netflix.svg";
 import SpotifyLogo from "../assets/icons/spotify.svg";
 import XboxLogo from "../assets/icons/xbox.svg";
 import YouTubeLogo from "../assets/icons/youtube.svg";
-import WorkExperienceLabel from "../Components/WorkExperienceLabel";
-import TimelineBar from "../Components/TimelineBar";
+import WorkExperience from "../Components/WorkExperience";
 
 function About() {
   return (
@@ -59,7 +60,7 @@ function About() {
       <SectionContainer>
         <HeadingTwo>Work Experience</HeadingTwo>
 
-        <TimelineBar />
+        <WorkExperience />
       </SectionContainer>
 
       {/* Tech Stack */}

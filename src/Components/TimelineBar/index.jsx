@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./TimelineBar.module.css";
 
-function TimelineBar() {
+function TimelineBar({ className }) {
   const timelineRef = useRef(null);
   const markerRef = useRef(null);
   const animationFrame = useRef(null);
@@ -32,7 +32,7 @@ function TimelineBar() {
 
       // LERP toward target
       currentOffset.current +=
-        (targetOffset.current - currentOffset.current) * 0.2;
+        (targetOffset.current - currentOffset.current) * 0.03;
 
       const percent = (currentOffset.current / timelineHeight) * 100;
 
@@ -60,7 +60,7 @@ function TimelineBar() {
   }, []);
 
   return (
-    <div className={styles.timelineWrapper}>
+    <div className={`${styles.timelineWrapper} ${className}`}>
       <div ref={timelineRef} className={styles.timeline}>
         <div ref={markerRef} className={styles.marker}></div>
       </div>

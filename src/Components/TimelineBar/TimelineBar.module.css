@@ -1,6 +1,6 @@
 .timelineWrapper {
   width: fit-content;
-  height: 200vh; /* For scroll space */
+  height: 100%; /* For scroll space */
   display: flex;
   align-items: center;
 }

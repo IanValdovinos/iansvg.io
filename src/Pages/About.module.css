@@ -47,3 +47,20 @@
     gap: 1rem;
   }
 }
+
+/* ############################################ */
+/* ############ WORK EXPERIENCE ############ */
+/* ############################################ */
+.workExperiencesContainer {
+  height: fit-content;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.timeline {
+  position: absolute;
+  left: 30%;
+}
