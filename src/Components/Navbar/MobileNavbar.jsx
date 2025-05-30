@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./MobileNavbar.module.css";
 
-import Hamburger from "hamburger-react";
+import { Sling as Hamburger } from "hamburger-react";
 
 function MobileNavbar({ onOptionSelect, onContactMeClick, children }) {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
