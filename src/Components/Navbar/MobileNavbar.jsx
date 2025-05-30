@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./MobileNavbar.module.css";
+
+import Hamburger from "hamburger-react";
 
 function MobileNavbar({ onOptionSelect, onContactMeClick, children }) {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
-
-  const openNavbar = () => {
-    setNavbarVisible((prev) => !prev);
-  };
 
   const handleOptionClick = () => {
     setNavbarVisible((prev) => !prev);
@@ -20,18 +18,9 @@ function MobileNavbar({ onOptionSelect, onContactMeClick, children }) {
 
   return (
     <>
-      {/* Hamburger Button */}
-      <svg
-        onClick={openNavbar}
-        className={styles.navbarButton}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-        />
-      </svg>
+      <div className={styles.navbarButton}>
+        <Hamburger toggled={isNavbarVisible} toggle={setNavbarVisible} />
+      </div>
 
       {/* Navigation Bar */}
       <nav
