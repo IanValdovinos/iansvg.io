@@ -32,6 +32,7 @@ import NetflixLogo from "../assets/icons/netflix.svg";
 import SpotifyLogo from "../assets/icons/spotify.svg";
 import XboxLogo from "../assets/icons/xbox.svg";
 import YouTubeLogo from "../assets/icons/youtube.svg";
+import ProjectHighlights from "../Components/ProjectHighlights";
 
 function About() {
   const currentYear = new Date().getFullYear();
@@ -62,6 +63,11 @@ function About() {
         <HeadingTwo>Work Experience</HeadingTwo>
 
         <WorkExperience />
+      </SectionContainer>
+
+      {/* Project Highlights */}
+      <SectionContainer>
+        <ProjectHighlights />
       </SectionContainer>
 
       {/* Tech Stack */}

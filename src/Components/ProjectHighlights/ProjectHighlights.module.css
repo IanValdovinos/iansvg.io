@@ -1,0 +1,44 @@
+.projectsSection {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.projectsContainer {
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.projectsButton {
+  margin-top: 2rem;
+  align-self: center;
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  /* Desktop styles here */
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles here */
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .projectsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

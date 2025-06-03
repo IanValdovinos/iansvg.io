@@ -8,6 +8,7 @@ import ProjectCard from "../Components/ProjectCard";
 import PrimaryButton from "../Components/PrimaryButton";
 import AnimatedLink from "../Components/AnimatedLink";
 import CertificateCard from "../Components/CertificateCard";
+import ProjectHighlights from "../Components/ProjectHighlights";
 
 // Import Media
 import ProjectImageOne from "../assets/images/test_project_image.png";
@@ -45,26 +46,7 @@ function Homepage() {
 
       {/* Projects Section */}
       <SectionContainer className={styles.projectsSection}>
-        <HeadingTwo>Project Highlights</HeadingTwo>
-        <div className={styles.projectsContainer}>
-          <ProjectCard title={"First Project"} coverImage={ProjectImageOne}>
-            Real-time mock interviews with AI, no forms or clicks just natural,
-            personalized conversations.
-          </ProjectCard>
-
-          <ProjectCard title={"First Project"} coverImage={ProjectImageOne}>
-            Real-time mock interviews with AI, no forms or clicks just natural,
-            personalized conversations.
-          </ProjectCard>
-
-          <ProjectCard title={"First Project"} coverImage={ProjectImageOne}>
-            Real-time mock interviews with AI, no forms or clicks just natural,
-            personalized conversations.
-          </ProjectCard>
-        </div>
-        <PrimaryButton className={styles.projectsButton}>
-          See All Projects
-        </PrimaryButton>
+        <ProjectHighlights />
       </SectionContainer>
 
       {/* Tech Stack Section */}
