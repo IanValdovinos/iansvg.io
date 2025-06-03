@@ -8,6 +8,7 @@ import SectionContainer from "../Components/SectionContainer";
 import TechStack from "../Components/TechStack";
 import UseItem from "../Components/UseItem";
 import WorkExperience from "../Components/WorkExperience";
+import GitHubContributions from "../Components/GitHubContributions";
 
 // Media
 import VSCodeLogo from "../assets/icons/vscode.svg";
@@ -33,6 +34,8 @@ import XboxLogo from "../assets/icons/xbox.svg";
 import YouTubeLogo from "../assets/icons/youtube.svg";
 
 function About() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <main>
       {/* About Me Introduction */}
@@ -64,6 +67,12 @@ function About() {
       {/* Tech Stack */}
       <SectionContainer>
         <TechStack />
+      </SectionContainer>
+
+      {/* GitHub Contributions */}
+      <SectionContainer>
+        <HeadingTwo>{currentYear} GitHub Contributions</HeadingTwo>
+        <GitHubContributions year={currentYear} />
       </SectionContainer>
 
       {/* What I Use */}
