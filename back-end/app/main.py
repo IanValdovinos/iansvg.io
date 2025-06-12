@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException, Path
 from pydantic import BaseModel, Field
 from starlette import status
 from typing import Annotated
+from datetime import datetime
 
 import models
 from models import Projects
@@ -9,6 +10,10 @@ from database import engine, SessionLocal
 from sqlalchemy.orm import Session
 
 app = FastAPI()
+
+# ######################################################
+# ################### DATABASE SETUP ###################
+# ######################################################
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -20,6 +25,10 @@ def get_db():
         db.close()
 
 db_dependency = Annotated[Session, Depends(get_db)]
+
+# #######################################################
+# ################### PYDANTIC MODELS ###################
+# #######################################################
 
 class ProjectRequest(BaseModel):
     title: str = Field(min_length=1, max_length=30)
@@ -34,9 +43,16 @@ class ProjectRequest(BaseModel):
         }
     }
 
+# #########################################################
+# ################### FASTAPI ENDPOINTS ###################
+# #########################################################
 @app.get("/author", status_code=status.HTTP_200_OK)
 async def get_author():
     return {"author": "Ian Samuel Valdovinos Granados"}
+
+@app.get("/day", status_code=status.HTTP_200_OK)
+async def get_week_day():
+    return {"day": datetime.today().strftime('%A')}
 
 @app.get("/projects", status_code=status.HTTP_200_OK)
 async def get_all_projects(db: db_dependency):
