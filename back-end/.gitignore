@@ -2,5 +2,5 @@
 .idea
 
 app/iansvg.db
-.app/__pycache__
-.app/.idea
+app/__pycache__
+app/.idea
