@@ -1,13 +1,9 @@
-from fastapi import FastAPI, Depends, HTTPException, Path
-from pydantic import BaseModel, Field
+from fastapi import FastAPI
 from starlette import status
-from typing import Annotated
 from datetime import datetime
 
 import models
-from models import Projects
-from database import engine, SessionLocal
-from sqlalchemy.orm import Session
+from database import engine
 
 from routers import projects
 from routers import auth
@@ -20,17 +16,17 @@ app = FastAPI()
 
 models.Base.metadata.create_all(bind=engine)
 
-
-
 # #####################################################
 # ################### IMPORT ROUTER ###################
 # #####################################################
+
 app.include_router(projects.router)
 app.include_router(auth.router)
 
 # #####################################################
 # ################### DEFAULT ROUTES ##################
 # #####################################################
+
 @app.get("/author", status_code=status.HTTP_200_OK)
 async def get_author():
     return {"author": "Ian Samuel Valdovinos Granados"}

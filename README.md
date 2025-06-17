@@ -16,6 +16,10 @@
 
 `brew install sqlite`
 
+`pip install psycopg2-binary`
+
+`pip install alembic`
+
 ### Encryption
 
 `pip install passlib`
