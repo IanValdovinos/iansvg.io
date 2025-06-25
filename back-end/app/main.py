@@ -8,6 +8,10 @@ from database import engine
 from routers import projects
 from routers import auth
 
+from dotenv import load_dotenv
+
+load_dotenv() # Load environment variables
+
 app = FastAPI()
 
 # ######################################################
