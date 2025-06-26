@@ -4,7 +4,7 @@ import styles from "./ContactMeForm.module.css";
 import PrimaryButton from "../PrimaryButton";
 
 // Import media
-import SendIcon from "../../assets/icons/send.svg";
+// import SendIcon from "../../assets/icons/send.svg";
 
 function ContactMeForm({ display, onClickBackground }) {
   const [name, setName] = useState("");
@@ -43,7 +43,7 @@ function ContactMeForm({ display, onClickBackground }) {
           <div className={styles.nameEmailContainer}>
             {/* First Name */}
             <div className={styles.labelInputContainer}>
-              <label for="name">Name:</label>
+              <label htmlFor="name">Name:</label>
               <input
                 className={styles.input}
                 id="name"
@@ -57,7 +57,7 @@ function ContactMeForm({ display, onClickBackground }) {
 
             {/* Email */}
             <div className={styles.labelInputContainer}>
-              <label for="email">Email:</label>
+              <label htmlFor="email">Email:</label>
               <input
                 className={styles.input}
                 id="email"
@@ -72,7 +72,7 @@ function ContactMeForm({ display, onClickBackground }) {
 
           {/* Message Field */}
           <div className={styles.labelInputContainer}>
-            <label for="message">Message:</label>
+            <label htmlFor="message">Message:</label>
             <textarea
               className={`${styles.messageTextArea} ${styles.input}`}
               id="message"

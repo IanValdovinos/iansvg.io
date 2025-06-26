@@ -1,6 +1,8 @@
 .venv
-.env
+.env.dev
+.env.prod
 .idea
+.dockerignore
 
 app/iansvg.db
 app/__pycache__

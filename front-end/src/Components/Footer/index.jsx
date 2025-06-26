@@ -1,17 +1,36 @@
+import React, { useEffect, useState } from "react";
 import styles from "./Footer.module.css";
 import ParagraphOne from "../ParagraphOne";
 import ShiningSpan from "../ShiningSpan";
+import api from "../../api/axios";
 
 function Footer() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const day = today.toLocaleDateString("en-US", { weekday: "long" });
+  const [date, setDate] = useState("");
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    api
+      .get("/date")
+      .then((response) => {
+        setDate(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError("Failed to get date.");
+      });
+  }, []);
 
   return (
     <footer className={styles.footer}>
       <ParagraphOne>
-        &copy; {year} Ian Samuel Valdovinos Granados.{" "}
-        <ShiningSpan>Have a great {day}!</ShiningSpan>
+        &copy; {date.year} Ian Samuel Valdovinos Granados.{" "}
+        {error ? (
+          <ShiningSpan>
+            There has been an error getting the day of the week
+          </ShiningSpan>
+        ) : (
+          <ShiningSpan>Have a great {date.weekday}!</ShiningSpan>
+        )}
       </ParagraphOne>
 
       <div className={styles.linksContainer}>

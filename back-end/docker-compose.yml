@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  fastapi:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.dev # default
+    profiles: ["dev"]
+
+  fastapi-prod:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.prod
+    profiles: ["prod"]
+
+volumes:
+  pgdata:

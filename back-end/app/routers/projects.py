@@ -13,7 +13,10 @@ from sqlalchemy.orm import Session
 import os
 import logging
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/projects",
+    tags=["projects"]
+)
 
 # Load bucket name and GCP credentials path from env
 GCS_BUCKET_NAME = os.getenv("GCS_BUCKET_NAME")
@@ -46,7 +49,7 @@ class ProjectRequest(BaseModel):
         }
     }
 
-@router.get("/projects", status_code=status.HTTP_200_OK)
+@router.get("/", status_code=status.HTTP_200_OK)
 async def get_all_projects(db: db_dependency):
     return db.query(Projects).all()
 

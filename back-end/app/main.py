@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from starlette import status
 from datetime import datetime
 
@@ -13,6 +14,19 @@ from dotenv import load_dotenv
 load_dotenv() # Load environment variables
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:5173",  # Vite development server
+]
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,            # Allow specific origins
+    allow_credentials=True,
+    allow_methods=["*"],              # Allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],              # Allow all headers
+)
 
 # ######################################################
 # ################### DATABASE SETUP ###################
@@ -35,6 +49,13 @@ app.include_router(auth.router)
 async def get_author():
     return {"author": "Ian Samuel Valdovinos Granados"}
 
-@app.get("/day", status_code=status.HTTP_200_OK)
-async def get_week_day():
-    return {"day": datetime.today().strftime('%A')}
+@app.get("/date", status_code=status.HTTP_200_OK)
+async def get_date():
+    now = datetime.now()
+    return {
+        "day": now.day,
+        "month": now.month,
+        "year": now.year,
+        "time": now.strftime('%H:%M:%S'),
+        "weekday": now.strftime('%A')
+    }
