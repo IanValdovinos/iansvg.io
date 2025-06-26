@@ -11,6 +11,7 @@ WORKDIR /app
 
 # Copy project files
 COPY . .
+COPY config/iansvg-b5664132816d.json config/iansvg-b5664132816d.json
 
 # Install dependencies
 RUN pip install --upgrade pip && \

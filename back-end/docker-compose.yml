@@ -1,13 +1,15 @@
-version: "3.9"
-
 services:
   fastapi:
     build: .
     ports:
       - "8080:8080"
     env_file:
-      - .env.dev # default
+      - .env.dev
     profiles: ["dev"]
+    networks:
+      - back-end_default
+    depends_on:
+      - cloudsql-proxy
 
   fastapi-prod:
     build: .
@@ -16,6 +18,21 @@ services:
     env_file:
       - .env.prod
     profiles: ["prod"]
+
+  cloudsql-proxy:
+    image: gcr.io/cloudsql-docker/gce-proxy:1.33.0
+    command: >
+      /cloud_sql_proxy -instances=${CLOUDSQL_INSTANCE}=tcp:0.0.0.0:5432
+      -credential_file=/config/iansvg-b5664132816d.json
+    volumes:
+      - ./config:/config:ro
+    profiles: ["dev"]
+    networks:
+      - back-end_default
+
+networks:
+  back-end_default:
+    driver: bridge
 
 volumes:
   pgdata:
