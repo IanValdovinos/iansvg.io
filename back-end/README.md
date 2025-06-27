@@ -6,6 +6,9 @@ Define and run application that works with production database:
 
 `docker compose --profile dev up`
 
+`docker compose --profile dev up --abort-on-container-exit --remove-orphans && \
+docker compose --profile dev down --rmi all --volumes --remove-orphans`
+
 To create new Docker image from a Dockerfile:
 
 `docker build -t fastapi-app .`
@@ -36,7 +39,7 @@ Push image to Google Cloud Container Registry:
 
 Deploy:
 
-`-gcloud run deploy iansvg \
+`gcloud run deploy iansvg \
  --image gcr.io/iansvg/fastapi-prod \
  --platform managed \
  --add-cloudsql-instances iansvg:us-central1:iansvg \

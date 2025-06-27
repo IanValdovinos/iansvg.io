@@ -17,6 +17,10 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",  # Vite development server
+    "https://iansvg-edc0a.web.app", # Firebase hosting URL
+    "https://iansvg-edc0a.firebaseapp.com", # Firebase hosting URL
+    "https://iansvg.io", # Custom domain for the project
+    "https://iansvg.com" # Custom domain for the project
 ]
 
 # Add CORS middleware
