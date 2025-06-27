@@ -48,6 +48,32 @@ Deploy:
   --port 8080 \
   --env-vars-file .env.yaml`
 
+## Alembic Table Enhancement
+
+1. Edit Your SQLAlchemy Models
+
+2. Move (cd) to the app/ directory
+
+3. Generate a new migration script:
+
+`alembic revision --autogenerate -m "Enhance table <table_name>: add/remove/update <column>"`
+
+4. Review and edit the migration script (alembic/versions/)
+
+5. Apply the migrations:
+
+`alembic upgrade head`
+
+If you get an error message that says "Target databse is not up to date", then upgrade your database to the latest migration:
+
+`alembic upgrade head`
+
+If you get error messages indicating that a column already exists, then you have to mark the migration as applied:
+
+`alembic stamp head`
+
+The run the `alembic upgrade head` command again.
+
 ## Package Installations
 
 All these packages are automatically installed when using Docker (through requirements.txt).

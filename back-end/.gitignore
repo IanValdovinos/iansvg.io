@@ -9,5 +9,6 @@ app/iansvg.db
 app/__pycache__
 app/.idea
 app/alembic.ini
+app/alembic/
 
 config/iansvg-b5664132816d.json

@@ -9,19 +9,17 @@ load_dotenv()
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = os.getenv("DB_HOST")
+DB_PUBLIC_IP = os.getenv("DB_PUBLIC_IP")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
-SQLALCHEMY_DATABASE_URL = ""
-if DB_HOST.startswith("/cloudsql/"):
-    SQLALCHEMY_DATABASE_URL = (
-        f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@/{DB_NAME}"
-        f"?host={DB_HOST}"
-    )
-else:
-    SQLALCHEMY_DATABASE_URL = (
-        f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-    )
+# FOR ALEMBIC MIGRATIONS ONLY
+SQLALCHEMY_DATABASE_URL = (f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_PUBLIC_IP}:{DB_PORT}/{DB_NAME}")
+
+# For development
+# SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
+print(SQLALCHEMY_DATABASE_URL)
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
