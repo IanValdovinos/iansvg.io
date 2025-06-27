@@ -40,13 +40,13 @@ Push image to Google Cloud Container Registry:
 Deploy:
 
 `gcloud run deploy iansvg \
- --image gcr.io/iansvg/fastapi-prod \
- --platform managed \
- --add-cloudsql-instances iansvg:us-central1:iansvg \
- --region us-central1 \
- --allow-unauthenticated \
- --port 8080 \
- --update-env-vars "$(cat .env.prod | grep -v '^#' | xargs | sed 's/ /,/g')"`
+  --image gcr.io/iansvg/fastapi-prod \
+  --platform managed \
+  --add-cloudsql-instances iansvg:us-central1:iansvg \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --port 8080 \
+  --env-vars-file .env.yaml`
 
 ## Package Installations
 

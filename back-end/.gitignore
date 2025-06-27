@@ -3,6 +3,7 @@
 .env.dev
 .env.prod
 .idea
+.env.yaml
 
 app/iansvg.db
 app/__pycache__
