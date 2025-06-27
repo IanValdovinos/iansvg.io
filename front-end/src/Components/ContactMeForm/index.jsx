@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeadingThree from "../HeadingThree";
 import styles from "./ContactMeForm.module.css";
 import PrimaryButton from "../PrimaryButton";
+import api from "../../api/axios";
 
 // Import media
 // import SendIcon from "../../assets/icons/send.svg";
@@ -10,12 +11,40 @@ function ContactMeForm({ display, onClickBackground }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // prevent default browser reload
-    alert(
-      "Feature under construction! Please email me directly at ian.valdovinos752001@gmail.com."
-    );
+  const sendEmail = async (name, email, message) => {
+    const response = await api.post("/send-email", {
+      name,
+      email,
+      message,
+    });
+    return response.data;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setSuccess(false);
+    setError(null);
+    try {
+      await sendEmail(name, email, message);
+      setSuccess(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      setError("Failed to send message.");
+    } finally {
+      alert(
+        "Thank you for your message! I will get back to you as soon as possible."
+      );
+      setLoading(false);
+      onClickBackground();
+    }
   };
 
   return (
