@@ -23,3 +23,4 @@ class Projects(Base):
     description = Column(String)
     cover_image_url = Column(String)
     owner_id = Column(Integer, ForeignKey('users.id'))
+    highlighted = Column(Boolean, default=False)
