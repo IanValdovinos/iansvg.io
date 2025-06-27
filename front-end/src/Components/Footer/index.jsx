@@ -4,34 +4,63 @@ import ParagraphOne from "../ParagraphOne";
 import ShiningSpan from "../ShiningSpan";
 import api from "../../api/axios";
 
+import { ThreeDot } from "react-loading-indicators";
+
 function Footer() {
   const [date, setDate] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
+  const getDate = async () => {
+    const response = await api.get("/date");
+
+    return response.data;
+  };
+
   useEffect(() => {
-    api
-      .get("/date")
-      .then((response) => {
-        setDate(response.data);
-      })
-      .catch((err) => {
-        console.error(err);
+    const fetchDate = async () => {
+      setLoading(true);
+      setSuccess(false);
+      setError(null);
+      try {
+        const data = await getDate();
+        setDate(data);
+        setSuccess(true);
+      } catch (err) {
         setError("Failed to get date.");
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDate();
   }, []);
 
   return (
     <footer className={styles.footer}>
-      <ParagraphOne>
-        &copy; {date.year} Ian Samuel Valdovinos Granados.{" "}
-        {error ? (
-          <ShiningSpan>
-            There has been an error getting the day of the week
-          </ShiningSpan>
-        ) : (
-          <ShiningSpan>Have a great {date.weekday}!</ShiningSpan>
-        )}
-      </ParagraphOne>
+      {loading ? (
+        <ThreeDot
+          width={30}
+          height={30}
+          color={["#9333ea", "#ec4899"]}
+          duration={1000}
+          className={styles.loadingIcon}
+        />
+      ) : null}
+
+      {success ? (
+        <ParagraphOne>
+          &copy; {date.year} Ian Samuel Valdovinos Granados.{" "}
+          {error ? (
+            <ShiningSpan>
+              There has been an error getting the day of the week
+            </ShiningSpan>
+          ) : (
+            <ShiningSpan>Have a great {date.weekday}!</ShiningSpan>
+          )}
+        </ParagraphOne>
+      ) : null}
 
       <div className={styles.linksContainer}>
         <a href="https://github.com/IanValdovinos" target="blank">
