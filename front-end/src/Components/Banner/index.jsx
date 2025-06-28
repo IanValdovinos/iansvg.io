@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import styles from "./Banner.module.css";
 
@@ -9,7 +10,7 @@ import ProfilePicture from "../../assets/images/ghibli_me.png";
 import PrimaryButton from "../PrimaryButton";
 import AnimatedLink from "../AnimatedLink";
 
-function Banner() {
+function Banner({ onContactMeClick }) {
   return (
     <header className={styles.banner}>
       <div className={styles.upperSection}>
@@ -43,8 +44,11 @@ function Banner() {
 
       {/* Action buttons */}
       <div className={styles.buttonContainer}>
-        <PrimaryButton>Let's Connect</PrimaryButton>
-        <AnimatedLink className={styles.link}>Learn about me</AnimatedLink>
+        <PrimaryButton onClick={onContactMeClick}>Let's Connect</PrimaryButton>
+
+        <Link to="/about-me">
+          <AnimatedLink className={styles.link}>Learn about me</AnimatedLink>
+        </Link>
       </div>
     </header>
   );

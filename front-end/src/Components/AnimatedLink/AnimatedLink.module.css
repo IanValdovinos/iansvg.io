@@ -1,4 +1,5 @@
 .link {
+  color: black;
   columns: var(--font-color);
   display: inline-block;
   height: max-content;

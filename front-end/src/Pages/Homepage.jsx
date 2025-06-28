@@ -22,12 +22,12 @@ import CertificateFive from "../assets/images/certificates/msu_cs_diploma.jpg";
 import ParagraphOne from "../Components/ParagraphOne";
 import TechStack from "../Components/TechStack";
 
-function Homepage() {
+function Homepage({ onContactMeClick }) {
   return (
     <main>
       {/* Banner */}
       <SectionContainer>
-        <Banner />
+        <Banner onContactMeClick={onContactMeClick} />
       </SectionContainer>
 
       {/* About Me */}

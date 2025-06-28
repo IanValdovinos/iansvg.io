@@ -1,8 +1,8 @@
 import styles from "./PrimaryButton.module.css";
 
-function PrimaryButton({ className, children }) {
+function PrimaryButton({ className, children, onClick }) {
   return (
-    <button className={`${className} ${styles.button}`}>
+    <button onClick={onClick} className={`${className} ${styles.button}`}>
       <div className={styles.glow}>
         <div className={styles.buttonInner}>
           <span className={styles.buttonText}>{children}</span>

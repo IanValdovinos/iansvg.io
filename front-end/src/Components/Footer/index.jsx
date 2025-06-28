@@ -43,7 +43,7 @@ function Footer() {
         <ThreeDot
           width={30}
           height={30}
-          color={["#9333ea", "#ec4899"]}
+          color={["var(--primary-color-one)", "var(--primary-color-two)"]}
           duration={1000}
           className={styles.loadingIcon}
         />

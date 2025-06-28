@@ -33,7 +33,10 @@ function App() {
 
       {/* Page Content */}
       <Routes>
-        <Route index element={<Homepage />} />
+        <Route
+          index
+          element={<Homepage onContactMeClick={flickContactForm} />}
+        />
         <Route path="about-me" element={<About />} />
         <Route path="projects" element={<Projects />} />
         <Route path="*" element={<PageNotFound />} />

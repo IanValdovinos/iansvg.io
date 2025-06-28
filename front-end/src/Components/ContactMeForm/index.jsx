@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeadingThree from "../HeadingThree";
 import styles from "./ContactMeForm.module.css";
 import PrimaryButton from "../PrimaryButton";
 import api from "../../api/axios";
+
+import { ThreeDot } from "react-loading-indicators";
 
 // Import media
 // import SendIcon from "../../assets/icons/send.svg";
@@ -39,13 +41,18 @@ function ContactMeForm({ display, onClickBackground }) {
     } catch (err) {
       setError("Failed to send message.");
     } finally {
-      alert(
-        "Thank you for your message! I will get back to you as soon as possible."
-      );
       setLoading(false);
-      onClickBackground();
     }
   };
+
+  useEffect(() => {
+    // Reset form state when display changes
+    if (!display) {
+      setLoading(false);
+      setSuccess(false);
+      setError(null);
+    }
+  }, [display]);
 
   return (
     <>
@@ -113,7 +120,29 @@ function ContactMeForm({ display, onClickBackground }) {
             />
           </div>
 
-          <PrimaryButton>Send</PrimaryButton>
+          <div className={styles.buttonContainer}>
+            {!loading && !success ? (
+              <PrimaryButton className={styles.submitButton}>
+                Send
+              </PrimaryButton>
+            ) : null}
+
+            {loading ? (
+              <ThreeDot
+                width={30}
+                height={30}
+                color={["var(--primary-color-one)", "var(--primary-color-two)"]}
+                duration={1000}
+                className={styles.loadingIcon}
+              />
+            ) : null}
+
+            {success ? (
+              <headingThree className={styles.successMessage}>
+                Message sent successfully!
+              </headingThree>
+            ) : null}
+          </div>
         </form>
       </div>
     </>

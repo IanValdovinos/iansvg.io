@@ -74,6 +74,21 @@
   height: auto;
 }
 
+.submitButton {
+  width: 100%;
+}
+
+.successMessage {
+  color: green;
+}
+
+.buttonContainer {
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Desktop (1024px and up) */
 @media (min-width: 1024px) {
 }
