@@ -39,12 +39,14 @@ user_dependency = Annotated[dict, Depends(get_current_user)]
 class ProjectRequest(BaseModel):
     title: str = Field(min_length=1, max_length=30)
     description: str= Field(min_length=1, max_length=200)
+    highlighted: bool = Field(default=False)
 
     model_config = {
         "json_schema_extra": {
             "example": {
                 "title": "PROJECT_TITLE",
-                "description": "PROJECT_DESCRIPTION"
+                "description": "PROJECT_DESCRIPTION",
+                "highlighted": False
             }
         }
     }
@@ -52,6 +54,14 @@ class ProjectRequest(BaseModel):
 @router.get("/", status_code=status.HTTP_200_OK)
 async def get_all_projects(db: db_dependency):
     return db.query(Projects).all()
+
+# Create an endpoint that selects and return all project with the highlighted column set to true
+@router.get("/highlighted", status_code=status.HTTP_200_OK)
+async def get_highlighted_projects(db: db_dependency):
+    highlighted_projects = db.query(Projects).filter(Projects.highlighted == True).all()
+    if not highlighted_projects:
+        raise HTTPException(status_code=404, detail="No highlighted projects found.")
+    return highlighted_projects
 
 @router.get("/project/{project_id}", status_code=status.HTTP_200_OK)
 async def get_project_by_id(db: db_dependency, project_id: int = Path(gt=0)):
@@ -109,6 +119,7 @@ async def update_project(user: user_dependency, db: db_dependency, project_reque
 
     project_model.title = project_request.title
     project_model.description = project_request.description
+    project_model.highlighted = project_request.highlighted
 
     db.add(project_model)
     db.commit()
